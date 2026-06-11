@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <meta name="description" content="방화 노래방의 진정한 가치를 찾는 당신에게. 우리는 평범한 가락을 거부한다. 고급스러운 사운드와 압도적인 분위기, 방화 최고의 노래방을 경험하라. 지금 전화: 010-6279-0862">
+    <meta name="keywords" content="방화 노래방, 방화 노래방 정보, 방화 최고 노래방, 노래방 추천, 방화 가성비 노래방, 방화 룸 노래방, 방화 코인노래방, 방화 노래방 가격">
+    <meta name="author" content="방화 노래방 정보">
+    <link rel="canonical" href="https://t3b07-bh-kb-info-2.vercel.app">
+    <meta property="og:title" content="방화 노래방 정보 | 당신의 목소리를 위한 무대">
+    <meta property="og:description" content="평범한 노래방은 가라. 진짜를 원한다면 여기로 와라.">
+    <title>블로그 | 방화 노래방 정보</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #f5d060;
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #111;
+            border-bottom: 1px solid #2a2a2a;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
+        .logo:hover {
+            color: #f5d060;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b0b0b0;
+        }
+        nav a:hover {
+            color: #d4af37;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #d4af37;
+            transition: all 0.3s ease;
+        }
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        .mobile-nav.active {
+            display: flex;
+        }
+        .mobile-nav a {
+            font-size: 1.8rem;
+            color: #f5f5f0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .mobile-nav a:hover {
+            color: #d4af37;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hero .tel-link {
+            display: inline-block;
+            background: #d4af37;
+            color: #0a0a0a;
+            padding: 16px 48px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .hero .tel-link:hover {
+            background: #f5d060;
+            transform: scale(1.02);
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        /* Blog Section */
+        .blog-section {
+            padding: 60px 0 100px;
+        }
+        .blog-post {
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .blog-post .post-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .blog-post .post-meta span {
+            border-right: 1px solid #333;
+            padding-right: 20px;
+        }
+        .blog-post .post-meta span:last-child {
+            border-right: none;
+        }
+        .blog-post h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+        .blog-post p {
+            font-size: 1.05rem;
+            color: #c8c8c0;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+        .blog-post blockquote {
+            border-left: 4px solid #d4af37;
+            padding: 20px 30px;
+            margin: 40px 0;
+            background: #1a1a1a;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #e0d5b0;
+        }
+        .blog-post .highlight-box {
+            background: #1d1d1d;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .blog-post .highlight-box h3 {
+            color: #d4af37;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .blog-post .highlight-box ul {
+            list-style: none;
+        }
+        .blog-post .highlight-box ul li {
+            padding: 8px 0;
+            color: #c8c8c0;
+            font-size: 1rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        .blog-post .highlight-box ul li::before {
+            content: "›";
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .blog-post .cta-inline {
+            background: linear-gradient(135deg, #1a1a1a, #222);
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .blog-post .cta-inline p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #e0d5b0;
+        }
+        .blog-post .cta-inline .tel-link {
+            display: inline-block;
+            background: #d4af37;
+            color: #0a0a0a;
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+        .blog-post .cta-inline .tel-link:hover {
+            background: #f5d060;
+        }
+        @media (max-width: 768px) {
+            .blog-post {
+                padding: 30px 20px;
+            }
+            .blog-post h2 {
+                font-size: 1.8rem;
+            }
+            .blog-post p {
+                font-size: 0.95rem;
+            }
+        }
+        /* Footer */
+        footer {
+            background: #111;
+            border-top: 1px solid #2a2a2a;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        footer p {
+            font-size: 0.85rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">방화 노래방</a>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/blog">블로그</a>
+                <a href="/contact">문의</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="/" onclick="toggleMobileNav()">홈</a>
+        <a href="/about" onclick="toggleMobileNav()">소개</a>
+        <a href="/blog" onclick="toggleMobileNav()">블로그</a>
+        <a href="/contact" onclick="toggleMobileNav()">문의</a>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>블로그</h1>
+            <p>진짜 목소리를 위한 무대, 방화 노래방의 모든 것. 가짜는 거른다.</p>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <article class="blog-post">
+                <div class="post-meta">
+                    <span>2025.03.15</span>
+                    <span>방화 노래방 팀</span>
+                    <span>5분 읽기</span>
+                </div>
+                <h2>방화에서 진짜 노래방을 찾는 법: 평범함은 가라</h2>
+                <p>솔직히 말하자. 방화에 노래방이 몇 개나 있는지 아는가? 열 개? 스무 개? 숫자는 중요하지 않다. 중요한 건 그중에서 진짜를 찾는 법이다. 나는 수많은 가짜를 봐왔다. 반짝이는 조명에 속고, 싼 가격에 현혹되고, 결국 실망하는 사람들. 더 이상 그러지 마라.</p>
+                <p>방화 노래방의 진정한 가치는 무엇인가? 사운드다. 조명이 아니다. 인테리어가 아니다. 바로 당신의 목소리를 완벽하게 살려주는 그 사운드 시스템. 우리는 평범한 스피커를 거부한다. JBL, Bose, 그런 건 기본이다. 진짜는 그 너머에 있다. 당신이 한 음을 내면, 그 음이 방 안을 가득 채우고, 당신의 귀를, 당신의 몸을 울리는 그 경험. 그것이 우리가 만든 것이다.</p>
+                
+                <blockquote>
+                    "평범한 노래방은 당신의 목소리를 죽인다. 우리는 당신의 목소리를 폭발시킨다."
+                </blockquote>
+
+                <p>많은 사람들이 묻는다. "왜 방화에 이런 곳이 있냐?" 나는 되묻는다. "왜 없어야 하는데?" 방화는 숨겨진 보석의 도시다. 외곽이라는 이유로 무시당하지만, 진짜를 아는 사람들은 알고 있다. 여기에 진정한 무언가가 있다는 것을. 우리는 그 믿음을 증명하기 위해 여기에 있다. 당신이 부르는 모든 노래, 모든 음표가 마치 콘서트장 같은 울림을 주도록 설계된 공간. 그것이 우리의 약속이다.</p>
+
+                <div class="highlight-box">
+                    <h3>진짜 방화 노래방의 3가지 조건</h3>
+                    <ul>
+                        <li>사운드가 당신을 감싸안는가? 아니면 그냥 들리는가?</li>
+                        <li>조명이 당신을 주인공으로 만드는가? 아니면 방해하는가?</li>
+                        <li>가격이 합리적인가? 아니면 그냥 싼가?</li>
+                    </ul>
+                </div>
+
+                <p>자, 이제 결정할 시간이다. 계속 평범한 노래방에서 목소리를 죽일 것인가? 아니면 진짜 무대에 서서 당신의 가락을 폭발시킬 것인가? 우리는 이미 준비되어 있다. 당신의 전화만 기다린다. 주저하지 마라. 진짜를 원한다면, 지금 바로 움직여라.</p>
+
+                <div class="cta-inline">
+                    <p>진짜를 원한다면, 지금 전화하라. 상담은 무료다. 후회는 없다.</p>
+                    <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+                </div>
+
+                <p>방화에서 진짜 노래방을 찾는 것은 어렵지 않다. 그냥 여기로 오면 된다. 우리는 당신의 목소리를 위한 무대를 만들었다. 이제 당신이 무대에 오를 차례다. 평범함은 저쪽에 두고 와라. 여기는 다르니까.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 방화 노래방 정보. 모든 권리 보유. | 당신의 목소리를 위한 무대</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('active');
+        }
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mobileNav');
+            const hamburger = document.querySelector('.hamburger');
+            if (nav.classList.contains('active') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
